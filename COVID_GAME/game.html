@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>COVID GEME</title>
+	<link rel="stylesheet" href="css/style.css">
+	<link rel="shortcut icon" type="image/png" href="img/favicon.png"/>
+</head>
+<body>
+
+
+	<!-- PAGE WELCOME -->
+	<div class="container-welcome">
+		<div class="welcome-text">
+			<img src="img/main-fonts.png" alt="">
+		</div>
+		<div class="welcome-nav">
+			<div class=""><button class="welcome-btn play-btn">PLAY</button></div>
+			<button class="welcome-btn">ABOUT</button>
+			<button class="welcome-btn">ABOUT</button>
+		</div>
+		<div class="setings-wrap"><button class="setings-btn"><img src="img/setings-icon.png" alt=""></button></div>
+	</div>
+
+	<!-- PAGE LEVELS -->
+	<div class="container-levels" style="display: none;">
+		<div class="wrap-levels">
+			<div class="container-levels-nav">
+				<div>
+				<a href="#"><button class="container-levels-button">1</button></a>
+				<a href="#"><button class="container-levels-button">2</button></a>
+				<a href="#"><button class="container-levels-button">3</button></a>
+				<a href="#"><button class="container-levels-button">4</button></a>
+				<a href="#"><button class="container-levels-button">5</button></a><br>
+				<a href="#"><button class="container-levels-button">6</button></a>
+				<a href="#"><button class="container-levels-button">7</button></a>
+				<a href="#"><button class="container-levels-button">8</button></a>
+				<a href="#"><button class="container-levels-button">9</button></a>
+				<a href="#"><button class="container-levels-button second">10</button></a>
+				</div>
+				<div class=""><a href="#"><button class="levels-button-final">11 <span class="levels-button-final-line"></span> <span class="levels-button-final-text">Final</span></button></a></div>
+			</div>
+			<div class="label-levels">
+				<h3>Level</h3>
+			</div>
+			<div class="wrap-bask-lavel-btn"><button class="bask-lavel-btn"><img src="img/bask-btn.png" alt=""></button></div>
+		</div>
+	</div>
+
+	<!-- PAGE SETINGS -->
+	<div class="container-setings" style="display: none;">
+		<div class="wrap-setings">
+			<div class="setings-nav">
+				<button class="setings-nav-item active volume">Volume</button>
+				<div class="setings-btn-line"></div>
+				<button class="setings-nav-item control">Control</button>
+				<div class="setings-btn-line"></div>
+				<div class="wrap-bask-lavel-btn"><button class="bask-lavel-btn setings"><img src="img/bask-btn.png" alt=""></button></div>
+			</div>
+			<!-- Громкость -->
+			<div class="setings-section volume">
+				<!-- <audio controls class="audio"><source src="music/Alan Walker – Force.mp3" type="audio/mpeg" autoplay><source src="music.ogg" type="audio/ogg"></audio> -->
+					<video id="myaudio" controls="" loop="" autoplay="" name="media" preload="auto" hidden>
+					<source src="music/Alan Walker – Force.mp3" type="audio/mp3">
+					</video>
+					<input class="volume-rang" type="range" min="0" max="10" value="5" step="0.1" />
+			</div>
+			<!-- Управление -->
+			<div class="setings-section control" style="display: none;">
+				<!-- Кнопки -->
+				<div class="setings-section-control-key">
+					<div class="setings-section-control-key-wrap">
+						<div>
+							<div id="control-one-key-wrap"><div class="setings-section-control-key-style">W</div></div>
+							<div id="control-next-key-wrap">
+								<div class="setings-section-control-key-style">A</div>
+								<div class="setings-section-control-key-style">S</div>
+								<div class="setings-section-control-key-style">D</div>
+							</div>
+						</div>
+						<div>
+							<input type="radio" id="key-radio" class="setings-control-radio">
+						</div>
+					</div>
+					<div class="setings-section-control-key-wrap">
+						<div>
+							<div id="control-one-key-wrap"><div class="setings-section-control-key-style"><!-- <img src="img/arrow/up.svg" alt=""> --> ↑ </div></div>
+							<div id="control-next-key-wrap">
+								<div class="setings-section-control-key-style"><!-- <img src="img/arrow/left.svg" alt=""> -->←</div>
+								<div class="setings-section-control-key-style"><!-- <img src="img/arrow/right.svg" alt=""> -->→</div>
+								<div class="setings-section-control-key-style"><!-- <img src="img/arrow/bottom.svg" alt=""> -->↓</div>
+							</div>
+						</div>
+						<div>
+							<input type="radio" id="arrow-radio" class="setings-control-radio">
+						</div>
+					</div>
+				</div>
+				<!-- Кнопки для прижка, бега и так далее -->
+				<div class="setings-control-buttons-wrap">
+					<div class="setings-control-buttons-item">
+						<p>Jump - </p> <div class="setings-control-buttons-item-key">Space</div>
+					</div>
+					<div class="setings-control-buttons-item">
+						<p>Use - </p> <div class="setings-control-buttons-item-key">F</div>
+					</div>
+					<div class="setings-control-buttons-item">
+						<p>Crouch - </p> <div class="setings-control-buttons-item-key">Shift</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+	<script src="js/jquery.js"></script>
+	<script src="js/script.js"></script>
+	<script type="text/javascript">
+	</script>
+</body>
+</html>
