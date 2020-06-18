@@ -47,6 +47,11 @@ p {
 	justify-content: center;
 	-ms-align-items: center;
 	align-items: center;
+	flex-direction: column;
+}
+.gorizont_mode img {
+	width: 391.25px;
+	height: 391.25px;
 }
 
 .welcome-text img {
