@@ -1,4 +1,13 @@
 $(document).ready(function () {
+
+	// Когда телефон переварачиваеться не правоильно 
+	if ( $('html').hasClass('portrait') ) {
+		$('.container-welcome').hide();
+		$('.gorizont_mode').show();
+	}else {
+		$('.gorizont_mode').hide();
+	}
+	
 	
 	// при клиике на кнопку играть, покажу таблицу уровней
 	$('.play-btn').click(function () {
@@ -57,6 +66,10 @@ $(document).ready(function () {
             $('.level_player img').attr('src', 'run.png');
             $('.level_player img').css('width', w_player_level_1);
             $('.level_player img').css('height', h_player_level_1);
+            var location_leavel_1_one = $('.level_player img').offset();
+            var location_leavel_1_player =  $('.level_1_location.one').offset();
+            // alert(location_leavel_1_player);
+            // if ( location_leavel_1_player == location_leavel_1_one) {alert('jnbngjnb');}
           }
           if (e.which == 37) {
           	var level_1_position = $('.level_player img').position();
@@ -78,6 +91,12 @@ $(document).ready(function () {
 	  $('.level_player img').css('width', w_player_level_1);
 	  $('.level_player img').css('height', h_player_level_1);
 	});
+	// dubl click
+	$('.control_btn.phone.right').dblclick(function () {
+		$('.control_btn.phone.right').hover(function () {
+			
+		});
+	});
 	$('.control_btn.phone.left').click(function () {
 		var level_1_position = $('.level_player img').position();
 		$('.level_player img').css('left', level_1_position.left - 20 + 'px');
@@ -90,5 +109,7 @@ $(document).ready(function () {
 		$('.level_player img').css('width', w_player_level_1);
 		$('.level_player img').css('height', h_player_level_1);
 	});
+
+
 
 });
