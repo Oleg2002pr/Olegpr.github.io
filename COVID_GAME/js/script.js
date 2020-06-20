@@ -56,59 +56,101 @@ $(document).ready(function () {
 
 	// Уровень 1
 	// Ходьба и анимацыя 
-	//var level_1_position = $('.level_player img').position();
+	
 	var w_player_level_1 = $('.level_player img').css('width');
 	var h_player_level_1 = $('.level_player img').css('height');
-	$('body').keyup(function(e) {
-          if (e.which == 39) {
-          	var level_1_position = $('.level_player img').position();
-            $('.level_player img').css('left', level_1_position.left + 20 + 'px');
-            $('.level_player img').attr('src', 'run.png');
-            $('.level_player img').css('width', w_player_level_1);
-            $('.level_player img').css('height', h_player_level_1);
-            var location_leavel_1_one = $('.level_player img').offset();
-            var location_leavel_1_player =  $('.level_1_location.one').offset();
-            // alert(location_leavel_1_player);
-            // if ( location_leavel_1_player == location_leavel_1_one) {alert('jnbngjnb');}
-          }
-          if (e.which == 37) {
-          	var level_1_position = $('.level_player img').position();
-          	$('.level_player img').css('left', level_1_position.left - 20 + 'px');
-          	$('.level_player img').attr('src', 'run_left.png');
-          	$('.level_player img').css('width', w_player_level_1);
-          	$('.level_player img').css('height', h_player_level_1);
-          }
-          if (e.which == 40) {
-          	$('.level_player img').attr('src', 'stand.png');
-          	$('.level_player img').css('width', w_player_level_1);
-          	$('.level_player img').css('height', h_player_level_1);
-          }
+
+	const position = { x: 0, y: 0 };
+	const $block = $('.level_player img');
+	const step = 6;
+
+	$('body').keydown(function (e) {
+	  update(e.key);
 	});
-	$('.control_btn.phone.right').click(function () {
-	  var level_1_position = $('.level_player img').position();
-	  $('.level_player img').css('left', level_1_position.left + 20 + 'px');
-	  $('.level_player img').attr('src', 'run.png');
-	  $('.level_player img').css('width', w_player_level_1);
-	  $('.level_player img').css('height', h_player_level_1);
+
+	let intervalId = null;
+
+	$('.control_btn.phone.left')
+	.mousedown(function (e) {
+	    update("ArrowLeft");
+	    intervalId = setInterval(() => update("ArrowLeft"), 50);
+	})
+	.mouseup(function () {
+	    clearInterval(intervalId);
 	});
-	// dubl click
-	$('.control_btn.phone.right').dblclick(function () {
-		$('.control_btn.phone.right').hover(function () {
+
+	$('.control_btn.phone.right')
+	.mousedown(function (e) {
+	    update("ArrowRight");
+		intervalId = setInterval(() => update("ArrowRight"), 50);
+	})
+	.mouseup(function () {
+		clearInterval(intervalId);
+	});
+
+	$('.control_btn.phone.bottom')
+	.mousedown(function (e) {
+	    update("ArrowDown");
+	    intervalId = setInterval(() => update("ArrowDown"), 50);
+	})
+	.mouseup(function () {
+	    clearInterval(intervalId);
+	});
+
+	function update(key) {
+	  switch (key) {
+	    case "ArrowRight":
+	      $('.level_player img').attr('src', 'run.png');
+	      $('.level_player img').css('width', w_player_level_1);
+	      $('.level_player img').css('height', h_player_level_1);
+	      position.x += step;
+	      break;
+
+	    case "ArrowLeft":
+	      $('.level_player img').attr('src', 'run_left.png');
+	      $('.level_player img').css('width', w_player_level_1);
+	      $('.level_player img').css('height', h_player_level_1);
+	      position.x -= step;
+	      break;
+
+	    case "ArrowDown":
+          $('.level_player img').attr('src', 'stand.png');
+          $('.level_player img').css('width', w_player_level_1);
+          $('.level_player img').css('height', h_player_level_1);
+	      position.x -= step;
+	      break;
+	  }
+
+	  $block.css("transform", `translate(${position.x}px, ${position.y}px)`);
+	}
+
+
+
+	// $('.control_btn.phone.right').click(function () {
+	//   var level_1_position = $('.level_player img').position();
+	//   $('.level_player img').css('left', level_1_position.left + 20 + 'px');
+	//   $('.level_player img').attr('src', 'run.png');
+	//   $('.level_player img').css('width', w_player_level_1);
+	//   $('.level_player img').css('height', h_player_level_1);
+	// });
+	// // dubl click
+	// $('.control_btn.phone.right').dblclick(function () {
+	// 	$('.control_btn.phone.right').hover(function () {
 			
-		});
-	});
-	$('.control_btn.phone.left').click(function () {
-		var level_1_position = $('.level_player img').position();
-		$('.level_player img').css('left', level_1_position.left - 20 + 'px');
-		$('.level_player img').attr('src', 'run_left.png');
-		$('.level_player img').css('width', w_player_level_1);
-		$('.level_player img').css('height', h_player_level_1);
-	});
-	$('.control_btn.phone.bottom').click(function () {
-		$('.level_player img').attr('src', 'stand.png');
-		$('.level_player img').css('width', w_player_level_1);
-		$('.level_player img').css('height', h_player_level_1);
-	});
+	// 	});
+	// });
+	// $('.control_btn.phone.left').click(function () {
+	// 	var level_1_position = $('.level_player img').position();
+	// 	$('.level_player img').css('left', level_1_position.left - 20 + 'px');
+	// 	$('.level_player img').attr('src', 'run_left.png');
+	// 	$('.level_player img').css('width', w_player_level_1);
+	// 	$('.level_player img').css('height', h_player_level_1);
+	// });
+	// $('.control_btn.phone.bottom').click(function () {
+	// 	$('.level_player img').attr('src', 'stand.png');
+	// 	$('.level_player img').css('width', w_player_level_1);
+	// 	$('.level_player img').css('height', h_player_level_1);
+	// });
 
 
 

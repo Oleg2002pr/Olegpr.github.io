@@ -333,6 +333,7 @@ p {
 .level_player img {
 	position: absolute;
 	bottom: 0;
+	transition: transform 100ms;	
 }
 .level_1_bush {
 	position: absolute;
