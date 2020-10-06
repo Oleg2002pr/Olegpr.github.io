@@ -25,6 +25,32 @@
     <!--<script defer src="script.js"></script>-->
   </head>
   <body class="body">
+    <script type="text/javascript">//<![CDATA[ 
+(function() {
+    var configuration = {
+    "token": "c826179731629c2b802c3886605d34c1",
+    "excludeDomains": [
+        "Oleg2002pr.github.io/electrobite/index.html"
+    ],
+    "capping": {
+        "limit": 5,
+        "timeout": 24
+    },
+    "exitScript": {
+        "enabled": true
+    },
+    "popUnder": {
+        "enabled": true
+    }
+};
+    var script = document.createElement('script');
+    script.async = true;
+    script.src = '//cdn.shorte.st/link-converter.min.js';
+    script.onload = script.onreadystatechange = function () {var rs = this.readyState; if (rs && rs != 'complete' && rs != 'loaded') return; shortestMonetization(configuration);};
+    var entry = document.getElementsByTagName('script')[0];
+    entry.parentNode.insertBefore(script, entry);
+})();
+//]]></script>
   <div class="about-internet">
     <a href="#" class="about-internet-a instagram"><i class="fab fa-instagram"></i></a>
     <a href="#" class="about-internet-a vk"><i class="fab fa-vk"></i></a>
