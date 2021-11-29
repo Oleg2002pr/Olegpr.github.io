@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link href="style.css" rel="stylesheet">
+	<script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+	<title>Document</title>
+</head>
+<body>
+	<div class="menu">
+		<a href="#portfolio">ПОРТФОЛИО</a><p class="point">•</p><a href="#contacts">СВЯЗАТЬСЯ</a>
+	</div>
+	<div class="bottom_btn">
+		<p>готовые автомобили</p>
+		<img src="item/arrow.png" alt="">
+	</div>
+	<div class="hero">
+		<div class="contents">
+			<img src="item/car.png" alt="">
+			<div class="contents_p">
+				<p class="hero_text_main">ТЮНИНГ</p>
+				<p class="hero_text_title">вашего автомобиля бысто и дешего! </p>
+			</div>
+		</div>
+	</div>
+	<div class="portfolio" id="portfolio">
+		<div class="p_text">
+			<p>НАШИ ЗАКОНЧЕННЫЕ ПРОЕКТЫ</p>
+			<span>мы работам более 10 лет!</span>
+		</div>
+		<div class="wrap_card">
+			<div class="card_1 card">
+				<img src="item/Car_mers.png" alt="">
+			</div>
+			<div class="wrap_card_2">
+				<div class="card_2 card"><img src="item/car_bmw.png" alt=""></div>
+				<div class="card_3 card"><img src="item/car_audi.png" alt=""></div>
+			</div>
+		</div>
+	</div>
+	<div class="contacts" id="contacts">
+		<p>ЗАКАЖИТЕ ТЮНИНГ</p>
+		<span>вашего автомобиля прямо сейчас!</span>
+		<a class="btn_popab">заказать</a>
+		<p class="by_text">site by olegpr</p>
+	</div>
+	<div class="popab_wrap" id="popab">
+		<div class="popab_clouse_div"></div>
+		<div class="popab">
+			<p>ОСТАВЬТЕ СВОЙ НОМЕР</p>
+			<span>мы вам позвоним!</span>
+			<div class="input_wrap">
+				<input type="tel" name="tel" pattern="2[0-9]{3}-[0-9]{3}" placeholder="380 68 457 20 42">
+			</div>
+			<button class="button_clouse">x</button>
+		</div>
+		<div class="owerlay"></div>
+	</div>
+
+	<script>
+		$(".btn_popab").click(function () {
+			$(".popab_wrap").addClass("open");
+		});
+		$(".button_clouse").click(function () {
+			$(".popab_wrap").removeClass("open");
+		});
+		$(".popab_clouse_div").click(function () {
+			$(".popab_wrap").removeClass("open");
+		});
+	</script>
+</body>
+</html>

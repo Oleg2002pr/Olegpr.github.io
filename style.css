@@ -1,0 +1,261 @@
+body, html {
+	padding: 0;
+	margin: 0;
+	width: 100%;
+	height: 100%;
+	background: #121212;
+	font-family: Font_c;
+}
+html {
+	scroll-behavior: smooth;
+}
+
+@font-face {
+    font-family: Font_c; 
+    src: url(font/muller.ttf); 
+}
+
+* {
+	transition: 0.3s;
+}
+p {
+	margin: 0;
+	padding: 0;
+}
+.hero, .portfolio, .contacts {
+	width: 100%;
+	height: 100%;
+}
+.hero {
+	background: url(bg/1.png);
+	background-position: bottom; 
+  	background-repeat: no-repeat; 
+  	background-size: cover;
+  	display: flex;
+  	justify-content: center;
+  	align-items: center;
+  	color: white;
+}
+.menu {
+	margin-top: 30px;
+	position: absolute;
+	color: white;
+	transform: translate(-50%, -50%);
+	left: 50%;
+	top: 50px;
+	font-size: 25px;
+}
+.menu a {
+	text-decoration: none;
+	color: white;
+	margin: 0 10px;
+}
+.menu a:hover {
+	color: #CACACA;
+}
+.menu p {
+	display: inline;
+}
+.point {
+	font-family: Roboto;
+}
+
+.contents {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+}
+.hero_text_main {
+	font-size: 70px;
+}
+.hero_text_title {
+	font-size: 18px;
+}
+.contents img {
+	-moz-transform: scale(-1, 1);
+	-webkit-transform: scale(-1, 1);
+	-o-transform: scale(-1, 1);
+	transform: scale(-1, 1);
+	filter: FlipH;
+	-ms-filter: "FlipH";
+	width: 60%;
+}
+.bottom_btn {
+	color: white;
+	position: absolute;
+	bottom: -40px;
+	transform: translate(-50%, -50%);
+	left: 50%;
+	text-align: center;
+}
+.bottom_btn p {
+	opacity: 40%;
+	margin-bottom: 5px;
+}
+
+.portfolio {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+}
+.p_text {
+	color: white;
+	text-align: center;
+	margin: 30px 0;
+}
+.p_text p {
+	font-size: 40px;
+}
+.p_text span {
+	font-size: 25px;
+}
+.wrap_card {
+	padding: 0 50px;
+}
+.wrap_card_2 {
+	display: flex;
+	justify-content: center;
+}
+.card_1, .card_2, .card_3 {
+	background-color: #242424;
+	border-radius: 30px;
+	margin: 10px;
+	padding: 5px;
+	text-align: center;
+}
+.card_1 {
+	display: flex;
+	justify-content: center;
+	/*width: 90%;*/
+}
+.card_1 img {
+	width: 35%;
+	-moz-transform: scale(-1, 1);
+	-webkit-transform: scale(-1, 1);
+	-o-transform: scale(-1, 1);
+	transform: scale(-1, 1);
+	filter: FlipH;
+	-ms-filter: "FlipH";
+}
+.card_2 img {
+	width: 90%;
+}
+.card_3 img {
+	width: 75%;
+} 
+.card:hover {
+	background: #313131;
+}
+
+.contacts {
+	background: url(bg/3.png);
+	background-position: bottom; 
+	background-repeat: no-repeat; 
+	background-size: cover;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	color: white;
+	position: relative;
+}
+.contacts p {
+	font-size: 70px;
+}
+.contacts span {
+	font-size: 25px;
+}
+.contacts a {
+	background-color: #242424;
+	border-radius: 15px;
+	border: none;
+	font-family: Font_c;
+	padding: 30px 50px;
+	font-size: 25px;
+	color: white;
+	margin: 20px 0;
+	cursor: pointer;
+	text-decoration: none;
+}
+.contacts a:hover {
+	background-color: #313131;
+}
+.by_text {
+	position: absolute;
+	transform: translate(-50%, -50%);
+	left: 50%;
+	bottom: 30px;
+	color: white;
+	font-size: 15px !important;
+	opacity: 40%;
+}
+
+.popab_wrap {
+	position: fixed;
+	color: white;
+	width: 100%;
+	height: 100%;
+	top: 0;
+	left: 0;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	opacity: 0;
+	visibility: hidden;
+	z-index: 10;
+}
+.popab_wrap.open {
+	opacity: 1;
+	visibility: visible;
+}
+.popab_clouse_div {
+	background: rgba(0, 0, 0, 0.6);
+	width: 100%;
+	height: 100%;
+	z-index: 8;
+	position: fixed;
+	top: 0;
+	left: 0;
+}
+.popab {
+	background: #242424;
+	padding: 40px;
+	border-radius: 20px;
+	text-align: center;
+	position: relative;
+	z-index: 15;
+}
+.popab p {
+	font-size: 40px;
+}
+.popab span {
+	font-size: 25px;
+}
+.popab input {
+	display: block;
+	text-align: center;
+	background: #2E2E2E;
+	color: white;
+	font-family: Font_c;
+	border: none;
+	border-radius: 5px;
+	padding: 10px 30px;
+	font-size: 20px;
+}
+.input_wrap {
+	display: flex;
+	justify-content: center;
+	width: 100%;
+	margin: 15px 0;
+}
+.button_clouse {
+	position: absolute;
+	top: 10px;
+	right: 10px;
+	background: none;
+	border: none;
+	color: white;
+	font-family: Font_c;
+	font-size: 20px;
+	cursor: pointer;
+}
