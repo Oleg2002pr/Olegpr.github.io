@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="shortcut icon" href="icon.png" type="image/png">
+	<title>OlegPr - Портфолио</title>
+	<link rel="stylesheet" href="css.css">
+</head>
+<body>
+
+<img src="bg.webp" alt="" class="paralax_img">
+
+<div class="container_menu">
+	<div class="menu">
+		<p>OlegPr</p>
+		<div class="menu_float_right">
+			<a class="menu_item" href="#portfolio_button">ПОРТФОЛИО</a>
+			<a class="menu_item" href="#about_button">ОБО МНЕ</a>
+		</div>
+	</div>
+</div>
+	
+<div class="container hero">
+	<div class="main_hero">
+		<img src="logo.jpg" alt="" class="hero_logo">
+		<h1>OlegPr</h1>
+		<p>Developer & Designer</p>
+	</div>
+</div>
+<div class="portfolio_container" id="about_button">
+	<div class="portfolio">
+		<h3>ПРИВЕТ!</h3>
+		<p>Я люблю работать в Photoshop и Illustrator. Делаю сайты и изучаю разработку игр.<br>Знаю html, css и js и изучаю C#. Делаю оформление Youtobe каналов на заказ. Есть на бирже Funpay. <a href="#footer">Мои контакты</a>.</p>
+	</div>
+</div>
+
+<div class="portfolio_title-container">
+	<h3>ПОРТФОЛИО</h3>
+</div>
+
+<div class="my_skills_container">
+	<h3 class="my_skills_container_h3">МОИ УМЕНИЯ</h3>
+	<div class="skill_wrap">
+		<div class="skill_item">
+			<img src="IMG/coding.svg" alt="">
+			<h3>GEME DEV</h3>
+			<p>Создание игр на Unity & C#</p>
+		</div>
+
+		<div class="skill_item">
+			<img src="IMG/adobe-photoshop.svg" alt="">
+			<h3>PHOTOSHOP</h3>
+			<p>Оформление Youtobe & ВК.</p>
+		</div>
+		<div class="skill_item">
+			<img src="IMG/html.svg" alt="">
+			<h3>SITES</h3>
+			<p>Вёрстка сайтов на Html, Css</p>
+		</div>
+	</div>
+</div>
+
+<div class="portfolio_main_container" id="portfolio_button">
+
+	<div class="photoshop">
+
+		<div class="portfolio_item" onclick="popab_1()">
+			<div class="popab" id="popab_1">
+				<div class="popab_wrap">
+					<img src="PHOTOSHOP/1/main.jpg" alt="" class="popab_wrap_img youtobe">
+				</div>
+			</div>
+			<img src="PHOTOSHOP/1/logo.jpg" alt="" class="photoshop_logo">
+			<h3>CYBERPUNK СТИЛЬ</h3>
+		</div>
+
+		<div class="portfolio_item" onclick="popab_2()">
+			<div class="popab" id="popab_2">
+				<div class="popab_wrap">
+					<img src="PHOTOSHOP/2/main.jpg" alt="" class="popab_wrap_img youtobe">
+				</div>
+			</div>
+			<img src="PHOTOSHOP/2/logo.jpg" alt="" class="photoshop_logo">
+			<h3>GTA СТИЛЬ</h3>
+		</div>
+
+		<div class="portfolio_item" onclick="popab_3()">
+			<div class="popab" id="popab_3">
+				<div class="popab_wrap">
+					<img src="PHOTOSHOP/3/main.jpg" alt="" class="popab_wrap_img youtobe">
+				</div>
+			</div>
+			<img src="PHOTOSHOP/3/logo.jpg" alt="" class="photoshop_logo">
+			<h3>CYBERPUNK СТИЛЬ</h3>
+		</div>
+	</div>
+</div>
+
+<div class="footer" id="footer">
+	<div class="footer_wrap">
+		<div class="foter_first_wrap">
+			<h3>КОНТАКТЫ</h3>
+			<a href="https://funpay.ru/users/2517958/ " target="_blank">Funpay</a>
+			<a href="https://t.me/oleg2007pr" target="_blank">Telegram</a>
+		</div>
+		<p>Site by OlegPr</p>
+	</div>
+</div>
+
+<script src="js.js"></script>
+
+</body>
+</html>
