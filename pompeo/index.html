@@ -19,6 +19,23 @@
 					<a href="#collection" class="menu_item">Shop</a>
 					<a href="#contacts" class="menu_item">Contact</a>
 					<a href="#" class="menu_item cart"><img src="img/header/trolley.png" alt="">Cart</a>
+                    <!--cart popab-->
+                    <div class="cart-popab">
+                        <div class="popab__wrap">
+                            <div class="cart">
+                                <div class="img"><img src="img/cart/1.png" alt=""></div>
+                                <p>10$</p>
+                            </div>
+                            <div class="cart">
+                                <div class="img"><img src="img/cart/2.png" alt=""></div>
+                                <p>5$</p>
+                            </div>
+                            <div class="cart">
+                               <div class="img"><img src="img/cart/3.png" alt=""></div>
+                                <p>50$</p>
+                            </div>
+                        </div>
+                    </div>
 				</div>
 				<div class="header__menu-mobile">
 					<a href="#" class="mobile_menu-icon"><img src="img/menu/menu.png" alt=""></a>
@@ -35,7 +52,7 @@
 					<p class="hero_text_title">Pompeo POttery</p>
 					<p class="hero_title">Unique Porcelain <br> Stone Collection <img src="img/&.png" alt=""></p>
 					<p class="hero_subtitle">Unique & modern pottery made by our master in porcelain & stones</p>
-					<a href="#" class="btn">Shop Collection</a>
+					<a href="#collection" class="btn">Shop Collection</a>
 				</div>
 				<div class="hero__img"><img src="img/hero/img.png" alt=""></div>
 			</div>
@@ -76,16 +93,38 @@
 					<div class="content">
 						<p class="card_title">Gold & Black Pottery</p>
 						<span>Lorem ipsum dolor sit amet, consectetur adipisicing elit sed do eiusmod tempor incididunt ut labore dolore aua. Ut enim ad minim veniam, quis nostrud exercitationulco laboris nisi ut aliquip ex ea commodo consequatuisaute.</span>
-						<a href="#" class="card_view">View Details</a>
+						<p class="card_view gold">View Details</p>
 					</div>
+					
+                <!--popab-->
+                   <div class="product_card-popab_bg gold">
+                       <div class="popab">
+                            <div class="img"><img src="img/card/1.png" alt=""></div>
+                            <div class="content">
+						          <p class="card_title">Gold & Black Pottery</p>
+						          <span>Lorem ipsum dolor sit amet, consectetur adipisicing elit sed do eiusmod tempor incididunt ut labore dolore aua. Ut enim ad minim veniam, quis nostrud exercitationulco laboris nisi ut aliquip ex ea commodo consequatuisaute. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Deleniti, eum! Repellat natus mollitia nulla similique, facere aperiam id doloremque dolor reprehenderit. Praesentium illo, perspiciatis nam soluta alias, impedit dolores provident. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vero rem distinctio, amet perspiciatis magni molestiae, illo architecto iusto alias facere sed voluptatum nisi, qui quaerat pariatur corrupti in accusamus natus. </span>
+					        </div>
+                        </div>
+                   </div>
 				</div>
 				<div class="card">
 					<div class="content">
 						<p class="card_title">Orange Ceramic</p>
 						<span>Pri cu dico labores officiis, odio principes complectitur ad sea. Sea id doctus forensibus, nec lorem vocent aliquam eu. Aliquid definitiones id cum, ad meliore perpetua referrentur sed. Quas suscipit ad mea verear vivendo tincidunt.</span>
-						<a href="#" class="card_view">View Details</a>
+						<p class="card_view orange">View Details</p>
 					</div>
 					<div class="img"><img src="img/card/2.png" alt=""></div>
+					
+                <!--popab-->
+                <div class="product_card-popab_bg orange">
+                       <div class="popab">
+                            <div class="img"><img src="img/card/2.png" alt=""></div>
+                            <div class="content">
+						          <p class="card_title">Orange Ceramic</p>
+						          <span>Pri cu dico labores officiis, odio principes complectitur ad sea. Sea id doctus forensibus, nec lorem vocent aliquam eu. Aliquid definitiones id cum, ad meliore perpetua referrentur sed. Quas suscipit ad mea verear vivendo tincidunt. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ut tempora iusto id doloribus error, numquam ipsum consequatur non, ipsa explicabo perspiciatis quibusdam ullam eum dicta cum ab consectetur! Amet, odio! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Exercitationem incidunt magnam tempore quos architecto eius enim maxime! Earum impedit iusto facilis aliquid est, esse modi aut, illum unde, itaque quasi.</span>
+					        </div>
+                        </div>
+                   </div>
 				</div>
 			</div>
 		</div>
@@ -121,7 +160,7 @@
 						</div>
 					</div>
 				</div>
-				<div class="collection__card-wrap">
+				<div class="collection__card-wrap second">
 					<div class="collection__card-item">
 						<div class="card_img-wrap"><img src="img/collection/4.png" alt=""></div>
 						<div class="card_item_title">
@@ -144,7 +183,7 @@
 						</div>
 					</div>
 				</div>
-				<a href="#" class="collection__card-btn btn">View All Products</a>
+				<a class="collection__card-btn btn">View All Products</a>
 			</div>
 		</div>
 	</div>
@@ -155,7 +194,7 @@
 				<p class="subtitle">Pompeo POttery</p>
 				<p class="ready__title">Ready to start shopping?</p>
 				<p class="ready__content">Lorem ipsum dolor sit amet, <a href="#">consectetur adipiscing elit</a> . Suspendisse varius enim in eros elementum.</p>
-				<a href="#" class="ready__btn btn">New Collection</a>
+				<a href="#collection" class="ready__btn btn">New Collection</a>
 			</div>
 		</div>
 	</div>
@@ -166,17 +205,26 @@
 				<img src="img/news/plane.png" alt="">
 				<p class="subtitle">Latest news</p>
 				<p class="news__title">Latest news <img src="img/&.png" alt="">New updates</p>
-				<form action="#">
+				<form action="#" class="news_form">
 					<div class="form_input">
-						<input type="email" required placeholder="Enter your email">
-						<button>SUBSCRIBE</button>
+						<input type="email" required placeholder="Enter your email" class="form_input_email">
+						<button class="news_form_btn" onclick="" type="submit">SUBSCRIBE</button>
 					</div>
 					<div class="form_checkbox">
 						<input type=checkbox id="new_sub" name="new_sub_checkbox" value="new_sub">
 						<label for="new_sub"><span></span>Sign up for our newsletter</label>
-						<!-- <input type="checkbox" class="checkbox">Sign up for our newsletter -->
 					</div>
 				</form>
+				
+				<div class="new_popab-bg">
+				    <div class="new_popab">
+				        <div class="popab__wrap">
+				            <div class="popab__title">thank you!</div>
+				            <div>The letter has been sent to:<span class="popab_email_name"></span></div>
+				            <button class="btn popab_btn_news">ok</button>
+				        </div>
+				    </div>
+				</div>
 			</div>
 		</div>
 	</div>
@@ -214,19 +262,7 @@
 			</div>
 		</div>
 	</footer>
-
-	<!-- js code -->
-	<script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
-	<script>
-		$('.mobile_menu-icon').click(function () {
-			$('.header__menu').addClass('active');
-			$('.mobile_exit-icon').addClass('active');
-
-			$('.mobile_exit-icon, .menu_item').click(function () {
-				$('.header__menu').removeClass('active');
-				$('.mobile_exit-icon').removeClass('active');
-			});
-		});
-	</script>
+	
+	<script src="js/script.js"></script>
 </body>
 </html>

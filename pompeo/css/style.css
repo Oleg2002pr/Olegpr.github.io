@@ -84,6 +84,10 @@ body, html {
   scroll-behavior: smooth;
 }
 
+body.lock {
+  overflow: hidden;
+}
+
 * {
   -webkit-transition: 0.3s;
   transition: 0.3s;
@@ -109,6 +113,7 @@ body, html {
           align-items: center;
   text-transform: uppercase;
   padding: 20px 35px;
+  cursor: pointer;
 }
 .btn:hover {
   -webkit-box-shadow: 0px 0px 8px 1px rgba(172, 19, 19, 0.78);
@@ -134,6 +139,7 @@ body, html {
 .header__menu {
   text-transform: uppercase;
   text-decoration: none;
+  position: relative;
 }
 .header__menu .menu_item {
   color: #6C6C6C;
@@ -207,6 +213,100 @@ body, html {
     font-size: 25px;
     font-family: Poppins_R;
   }
+}
+.header .cart-popab {
+  position: absolute;
+  right: -20px;
+  background: white;
+  padding: 10px 20px;
+  -webkit-box-shadow: 0px 0px 10px -2px rgba(0, 0, 0, 0.5);
+  box-shadow: 0px 0px 10px -2px rgba(0, 0, 0, 0.5);
+  border-radius: 10px;
+  top: 40px;
+  opacity: 0;
+  visibility: hidden;
+  z-index: 10;
+}
+.header .cart-popab.active {
+  opacity: 1;
+  visibility: visible;
+}
+.header .cart-popab:after {
+  content: "";
+  border-bottom: 10px solid white;
+  border-left: 10px solid transparent;
+  border-right: 10px solid transparent;
+  position: absolute;
+  top: -10px;
+  left: 50%;
+  -webkit-transform: translate(-50%, 0);
+          transform: translate(-50%, 0);
+}
+@media (max-width: 1110px) {
+  .header .cart-popab {
+    right: 0px;
+  }
+}
+@media (max-width: 510px) {
+  .header .cart-popab {
+    top: 49%;
+    right: 0;
+    left: 50%;
+    max-width: 35%;
+    -webkit-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
+  }
+  .header .cart-popab:before {
+    content: "";
+    border-top: 10px solid white;
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+    position: absolute;
+    bottom: -9px;
+    left: 50%;
+    -webkit-transform: translate(-50%, 0);
+            transform: translate(-50%, 0);
+  }
+  .header .cart-popab:after {
+    display: none;
+  }
+}
+.header .cart-popab .cart {
+  display: -moz-flex;
+  display: -ms-flex;
+  display: -o-flex;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  color: #6C6C6C;
+  font-size: 15px;
+  font-family: Poppins_B;
+}
+.header .cart-popab .cart .img {
+  width: 3em;
+  height: 3em;
+  display: -moz-flex;
+  display: -ms-flex;
+  display: -o-flex;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin-right: 10px;
+}
+.header .cart-popab .cart .img img {
+  max-width: 100%;
 }
 .header__menu-mobile {
   display: none;
@@ -623,6 +723,74 @@ body, html {
   color: #000000;
   margin-top: 15px;
 }
+.card .product_card-popab_bg {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 10;
+  display: -moz-flex;
+  display: -ms-flex;
+  display: -o-flex;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  opacity: 0;
+  pointer-events: none;
+}
+.card .product_card-popab_bg.active {
+  opacity: 1;
+  pointer-events: all;
+}
+.card .product_card-popab_bg .popab {
+  background: white;
+  width: 80%;
+  display: -moz-flex;
+  display: -ms-flex;
+  display: -o-flex;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 20px 20px;
+  border-radius: 20px;
+}
+@media (max-width: 450px) {
+  .card .product_card-popab_bg .popab {
+    text-align: center;
+  }
+  .card .product_card-popab_bg .popab .content {
+    text-align: center;
+    width: 100%;
+    -webkit-box-flex: 1;
+        -ms-flex: auto;
+            flex: auto;
+  }
+}
+.card .product_card-popab_bg .img:before {
+  display: none;
+}
+@media (max-width: 450px) {
+  .card .product_card-popab_bg .img {
+    display: none;
+  }
+}
+.card .product_card-popab_bg .content {
+  padding-right: 0;
+}
 
 .collection {
   padding: 20px 0;
@@ -658,6 +826,16 @@ body, html {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+}
+.collection__card-wrap.second {
+  visibility: hidden;
+  opacity: 0;
+  max-height: 0;
+}
+.collection__card-wrap.active {
+  visibility: visible;
+  opacity: 1;
+  max-height: 100%;
 }
 .collection__card-item {
   margin-bottom: 20px;
@@ -695,6 +873,11 @@ body, html {
 .collection__card-btn {
   margin: 0 auto;
   margin-top: 20px;
+}
+.collection__card-btn.none {
+  visibility: hidden;
+  opacity: 0;
+  height: 0;
 }
 
 .ready {
@@ -832,6 +1015,51 @@ body, html {
 .news .form_checkbox input[type=checkbox]:checked + label span::after {
   content: "✓";
   color: #dbdbdb;
+}
+.news .new_popab-bg {
+  width: 100%;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.5);
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: -moz-flex;
+  display: -ms-flex;
+  display: -o-flex;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  opacity: 0;
+  pointer-events: none;
+}
+.news .new_popab-bg.active {
+  opacity: 1;
+  pointer-events: all;
+}
+.news .new_popab-bg .new_popab {
+  background: white;
+  padding: 40px;
+  border-radius: 20px;
+}
+.news .new_popab-bg .popab__title {
+  font-size: 40px;
+  font-family: Poppins_B;
+  text-transform: uppercase;
+  margin-bottom: 10px;
+}
+.news .new_popab-bg .popab_email_name {
+  margin-left: 5px;
+  font-family: Poppins_B;
+}
+.news .popab_btn_news {
+  margin-top: 10px;
+  padding: 10px 20px;
 }
 
 .footer {
