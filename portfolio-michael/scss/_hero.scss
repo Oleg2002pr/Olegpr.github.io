@@ -1,0 +1,37 @@
+.hero {
+   &__wrapper {
+      padding: 100px 0;
+      display: flex;
+      align-items: center;
+   }
+   &__content {
+      width: 50%;
+   }
+   canvas {
+      width: 50%;
+   }
+   h1 {
+      font-weight: 700;
+      font-size: 78px;
+      line-height: 90.48px;
+      max-width: 336px;
+   }
+   &__subtitle {
+      font-size: 30px;
+      line-height: 41.1px;
+      margin: 30px 0;
+   }
+   &__tegs {
+      max-width: 411px;
+      display: flex;
+      flex-wrap: wrap;
+      column-gap: 20px; row-gap: 20px;
+      &-item {
+         font-size: 21px;
+         padding: 2px 16px;
+         background: #1378EF;
+         color: white;
+         border-radius: 64px;
+      }
+   }
+}
