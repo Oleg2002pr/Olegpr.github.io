@@ -6,12 +6,16 @@
       margin-top: 70px;
       &-title {
          margin-bottom: 30px;
-         a {
+         button {
             font-size: 22px;
             line-height: 33px;
-            margin: 0 25px;
-            &:first-child {margin-left: 0;}
-            &:last-child {margin-right: 0;}
+            margin: 0 50px;
+            background: none;
+            color: rgba(255, 255, 255, 0.59);
+            transition: .3s;
+            &.active {color: rgba(255, 255, 255, 1);}
+            &:first-child {margin: 0;}
+            &:last-child {margin: 0;}
          }
       }
 
@@ -23,7 +27,7 @@
          visibility: hidden;
          height: 0;
          transition: 0.5s;
-         &:target {
+         &.active {
             opacity: 1;
             visibility: visible;
             height: auto;
